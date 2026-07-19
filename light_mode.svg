@@ -1,42 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+width="900"
+height="320"
+viewBox="0 0 900 320">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="250">
+<rect width="100%" height="100%" fill="#FFFFFF"/>
 
-<rect width="100%" height="100%" fill="#24292f"/>
-
-<text x="50" y="70"
-      font-size="36"
-      fill="#58a6ff"
-      font-family="Consolas">
-
-Valentín Aguayo
-
-</text>
-
-<text x="50" y="120"
-      font-size="22"
-      fill="#24292f"
-      font-family="Consolas">
-
-Computer Science Student
-
-</text>
-
-<text x="50" y="165"
-      font-size="18"
-      fill="#8b949e"
-      font-family="Consolas">
-
-Backend • Java • Python • C#
-
-</text>
-
-<text x="50" y="215"
-      font-size="14"
-      fill="#3fb950"
-      font-family="Consolas">
-
-Updated: 19/07/2026 04:47
-
-</text>
+<rect x="20" y="20" width="860" height="280" fill="#F6F8FA" stroke="#D0D7DE" stroke-width="1" rx="16"/>
+<text x="45" y="65" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="bold" fill="#0969DA">Valentín Aguayo</text>
+<text x="45" y="95" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="normal" fill="#57606A">Computer Science Student</text>
+<line x1="45" y1="115" x2="855" y2="115" stroke="#D0D7DE" stroke-width="1"/>
+<text x="45" y="150" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="normal" fill="#24292F">Repositories : 1</text>
+<text x="45" y="180" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="normal" fill="#24292F">Followers    : 1</text>
+<text x="45" y="210" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="normal" fill="#24292F">Following    : 2</text>
+<text x="450" y="150" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="bold" fill="#0969DA">Technologies</text>
+<text x="450" y="180" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="normal" fill="#24292F">• Python</text>
+<text x="450" y="208" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="normal" fill="#24292F">• Java</text>
+<text x="450" y="236" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="normal" fill="#24292F">• C#</text>
+<text x="450" y="264" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="normal" fill="#24292F">• Git</text>
+<text x="450" y="292" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="normal" fill="#24292F">• GitHub</text>
+<text x="450" y="320" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="normal" fill="#24292F">• VS Code</text>
+<line x1="45" y1="265" x2="855" y2="265" stroke="#D0D7DE" stroke-width="1"/>
+<text x="45" y="290" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="normal" fill="#57606A">Updated: 2026-07-19 05:32 UTC</text>
 
 </svg>

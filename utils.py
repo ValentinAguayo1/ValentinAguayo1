@@ -1,26 +1,31 @@
-from typing import Dict
+from datetime import datetime
 
 
-def abbreviate(number: int) -> str:
-    if number >= 1_000_000:
-        return f"{number / 1_000_000:.1f}M"
+def format_number(value: int) -> str:
+    """
+    Formatea un número con separadores de miles.
+    """
+    return f"{value:,}"
 
-    if number >= 1_000:
-        return f"{number / 1_000:.1f}K"
 
-    return str(number)
+def current_timestamp() -> str:
+    """
+    Devuelve la fecha y hora actual en formato UTC.
+    """
+    return datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
+
+
+def clamp(value: float, minimum: float, maximum: float) -> float:
+    """
+    Limita un valor entre un mínimo y un máximo.
+    """
+    return max(minimum, min(value, maximum))
 
 
 def percentage(value: int, total: int) -> float:
+    """
+    Calcula un porcentaje evitando divisiones por cero.
+    """
     if total == 0:
-        return 0
-
-    return round((value / total) * 100, 1)
-
-
-def top_languages(languages: Dict[str, int], limit: int = 5):
-    return sorted(
-        languages.items(),
-        key=lambda item: item[1],
-        reverse=True,
-    )[:limit]
+        return 0.0
+    return (value / total) * 100

@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, slots=True)
 class ProfileConfig:
     username: str
     name: str
@@ -30,21 +30,21 @@ PROFILE = ProfileConfig(
 
 THEMES = {
     "dark": {
-        "background": "#0d1117",
-        "card": "#161b22",
-        "border": "#30363d",
-        "title": "#58a6ff",
-        "text": "#c9d1d9",
-        "secondary": "#8b949e",
-        "accent": "#3fb950",
+        "background": "#0D1117",
+        "card": "#161B22",
+        "border": "#30363D",
+        "title": "#58A6FF",
+        "text": "#C9D1D9",
+        "secondary": "#8B949E",
+        "accent": "#3FB950",
     },
     "light": {
-        "background": "#ffffff",
-        "card": "#f6f8fa",
-        "border": "#d0d7de",
-        "title": "#0969da",
-        "text": "#24292f",
-        "secondary": "#57606a",
-        "accent": "#1a7f37",
+        "background": "#FFFFFF",
+        "card": "#F6F8FA",
+        "border": "#D0D7DE",
+        "title": "#0969DA",
+        "text": "#24292F",
+        "secondary": "#57606A",
+        "accent": "#1A7F37",
     },
 }

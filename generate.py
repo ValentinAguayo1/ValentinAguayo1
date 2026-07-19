@@ -1,15 +1,20 @@
-from github_api import obtener_estadisticas
-from svg_renderer import generar
+from github_api import GitHubAPI
+from svg_renderer import SVGRenderer
 
 
 def main():
+    print("Obteniendo datos de GitHub...")
 
-    stats = obtener_estadisticas()
+    api = GitHubAPI()
+    stats = api.get_basic_profile()
 
-    generar("dark", stats)
-    generar("light", stats)
+    print("Generando tema oscuro...")
+    SVGRenderer("dark").render(stats, "dark_mode.svg")
 
-    print("SVGs generados correctamente.")
+    print("Generando tema claro...")
+    SVGRenderer("light").render(stats, "light_mode.svg")
+
+    print("¡Archivos generados correctamente!")
 
 
 if __name__ == "__main__":

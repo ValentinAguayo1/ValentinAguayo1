@@ -1,125 +1,130 @@
-from datetime import datetime
-
-from config import (
-    NAME,
-    ROLE,
-    LOCATION,
-    BIO,
-    TECHNOLOGIES,
-    THEMES,
-)
+from config import PROFILE, THEMES
+from models import GitHubStats
+from svg_canvas import SVGCanvas
+from utils import current_timestamp
 
 
-WIDTH = 900
-HEIGHT = 300
+class SVGRenderer:
+    WIDTH = 900
+    HEIGHT = 320
 
+    def __init__(self, theme: str):
+        if theme not in THEMES:
+            raise ValueError(f"Tema '{theme}' no válido.")
 
-def generar(theme: str, stats: dict):
+        self.colors = THEMES[theme]
 
-    colors = THEMES[theme]
+        self.canvas = SVGCanvas(
+            width=self.WIDTH,
+            height=self.HEIGHT,
+            background=self.colors["background"],
+        )
 
-    techs = " • ".join(TECHNOLOGIES)
+    def render(self, stats: GitHubStats, output_file: str):
+        c = self.canvas
 
-    fecha = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
+        # Tarjeta principal
+        c.rect(
+            x=20,
+            y=20,
+            width=860,
+            height=280,
+            fill=self.colors["card"],
+            stroke=self.colors["border"],
+            stroke_width=1,
+            rx=16,
+        )
 
-    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}">
-<rect width="100%" height="100%" fill="{colors["background"]}"/>
+        # Título
+        c.text(
+            45,
+            65,
+            PROFILE.name,
+            size=28,
+            fill=self.colors["title"],
+            weight="bold",
+        )
 
-<rect
-    x="25"
-    y="25"
-    rx="18"
-    width="850"
-    height="250"
-    fill="{colors["card"]}"
-/>
+        # Cargo
+        c.text(
+            45,
+            95,
+            PROFILE.role,
+            size=16,
+            fill=self.colors["secondary"],
+        )
 
-<text
-    x="50"
-    y="70"
-    font-size="28"
-    font-family="Consolas, monospace"
-    fill="{colors["title"]}"
-    font-weight="bold">
-{NAME}
-</text>
+        # Línea separadora
+        c.line(
+            45,
+            115,
+            855,
+            115,
+            self.colors["border"],
+        )
 
-<text
-    x="50"
-    y="100"
-    font-size="18"
-    font-family="Consolas"
-    fill="{colors["text"]}">
-{ROLE}
-</text>
+        # Estadísticas
+        c.text(
+            45,
+            150,
+            f"Repositories : {stats.repositories}",
+            size=18,
+            fill=self.colors["text"],
+        )
 
-<text
-    x="50"
-    y="125"
-    font-size="16"
-    font-family="Consolas"
-    fill="{colors["secondary"]}">
-{LOCATION}
-</text>
+        c.text(
+            45,
+            180,
+            f"Followers    : {stats.followers}",
+            size=18,
+            fill=self.colors["text"],
+        )
 
-<text
-    x="50"
-    y="155"
-    font-size="15"
-    font-family="Consolas"
-    fill="{colors["text"]}">
-{BIO}
-</text>
+        c.text(
+            45,
+            210,
+            f"Following    : {stats.following}",
+            size=18,
+            fill=self.colors["text"],
+        )
 
-<text
-    x="50"
-    y="195"
-    font-size="17"
-    font-family="Consolas"
-    fill="{colors["accent"]}">
-Repositories : {stats["repositories"]}
-</text>
+        # Tecnologías
+        c.text(
+            450,
+            150,
+            "Technologies",
+            size=20,
+            fill=self.colors["title"],
+            weight="bold",
+        )
 
-<text
-    x="300"
-    y="195"
-    font-size="17"
-    font-family="Consolas"
-    fill="{colors["accent"]}">
-Followers : {stats["followers"]}
-</text>
+        y = 180
 
-<text
-    x="500"
-    y="195"
-    font-size="17"
-    font-family="Consolas"
-    fill="{colors["accent"]}">
-Following : {stats["following"]}
-</text>
+        for tech in PROFILE.technologies:
+            c.text(
+                450,
+                y,
+                f"• {tech}",
+                size=18,
+                fill=self.colors["text"],
+            )
+            y += 28
 
-<text
-    x="50"
-    y="230"
-    font-size="15"
-    font-family="Consolas"
-    fill="{colors["secondary"]}">
-{techs}
-</text>
+        # Footer
+        c.line(
+            45,
+            265,
+            855,
+            265,
+            self.colors["border"],
+        )
 
-<text
-    x="50"
-    y="258"
-    font-size="12"
-    font-family="Consolas"
-    fill="{colors["secondary"]}">
-Updated automatically · {fecha}
-</text>
+        c.text(
+            45,
+            290,
+            f"Updated: {current_timestamp()}",
+            size=13,
+            fill=self.colors["secondary"],
+        )
 
-</svg>
-"""
-
-    nombre = f"{theme}_mode.svg"
-
-    with open(nombre, "w", encoding="utf-8") as archivo:
-        archivo.write(svg)
+        c.save(output_file)
