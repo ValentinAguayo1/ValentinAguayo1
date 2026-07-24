@@ -1,54 +1,93 @@
 <div align="center">
 
-# 👋 Hola, soy **Valentín Aguayo**
+# Valentín Aguayo
 
-### 💻 Computer Science Student
+### Computer Science Student • Backend Developer
 
-Apasionado por el desarrollo de software, backend e inteligencia artificial.
+Building reliable software with Python, Java and C#.
 
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="dark_mode.svg">
-    <img src="light_mode.svg" alt="Terminal Banner">
+    <img src="light_mode.svg" alt="GitHub Profile Banner">
 </picture>
 
 <br>
 
-<img src="https://skillicons.dev/icons?i=java,python,cs,git,github,vscode" />
-
----
-
-## 📊 GitHub
-
-![](https://github-readme-stats.vercel.app/api?username=ValentinAguayo1&show_icons=true&theme=github_dark&hide_border=true)
-
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=ValentinAguayo1&layout=compact&theme=github_dark&hide_border=true)
+<img src="https://skillicons.dev/icons?i=python,java,cs,git,github,vscode,mysql" alt="Tech Stack" />
 
 </div>
 
 ---
 
-# 🚀 Sobre mí
+# About Me
 
-- 🎓 Computer Science Student
-- 🌱 Aprendiendo Java, Python y C#
-- 💻 Interesado en Backend Development
-- 🤖 Aprendiendo Inteligencia Artificial
-- 🇨🇱 Chile
+I'm a Computer Science student from Chile with a strong interest in backend development, software engineering and artificial intelligence.
+
+I enjoy solving problems through software and continuously improving my programming skills by building academic and personal projects. My goal is to develop clean, efficient and maintainable applications while learning modern software engineering practices.
 
 ---
 
-## 📌 Objetivos 2026
+# Tech Stack
 
-- ✅ Crear un portafolio profesional.
-- 📚 Mejorar mis habilidades en Java.
-- 🐍 Dominar Python.
-- 🔥 Publicar proyectos en GitHub.
-- 🤝 Contribuir a proyectos Open Source.
+### Languages
+
+- Python
+- Java
+- C#
+- SQL
+
+### Tools
+
+- Git
+- GitHub
+- Visual Studio Code
+- MySQL
+
+### Currently Learning
+
+- Backend Development
+- Software Architecture
+- Design Patterns
+- Artificial Intelligence
+
+---
+
+# Featured Projects
+
+I'm currently building my software development portfolio.
+
+As I complete new academic and personal projects, this section will showcase the work I'm most proud of, including project descriptions, technologies used and links to each repository.
+
+Stay tuned!
+
+---
+
+# Current Goals
+
+- Build production-quality software projects.
+- Improve backend development skills.
+- Learn software architecture and system design.
+- Contribute to open-source projects.
+- Continue growing as a software developer.
+
+---
+
+# Connect With Me
+
+<p align="center">
+
+<a href="https://github.com/ValentinAguayo1">
+<img src="https://img.shields.io/badge/GitHub_Profile-181717?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+
+</p>
 
 ---
 
 <div align="center">
 
-⭐ Gracias por visitar mi perfil ⭐
+### Thanks for visiting my profile!
+
+*"Always learning. Always building."*
 
 </div>

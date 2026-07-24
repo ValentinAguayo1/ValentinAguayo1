@@ -24,6 +24,11 @@ class GitHubStats:
     pull_requests: int = 0
     issues: int = 0
 
+    avatar_url: str = ""
+    profile_url: str = ""
+
+    created_at: str = ""
+
     languages: list[Language] = field(default_factory=list)
 
     updated_at: datetime = field(default_factory=datetime.utcnow)

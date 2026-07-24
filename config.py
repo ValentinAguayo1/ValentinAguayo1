@@ -16,7 +16,7 @@ PROFILE = ProfileConfig(
     name="Valentín Aguayo",
     role="Computer Science Student",
     location="🇨🇱 Chile",
-    bio="Backend developer in progress. Passionate about Python, Java and software engineering.",
+    bio="Computer Science student focused on backend development and software engineering.",
     technologies=[
         "Python",
         "Java",

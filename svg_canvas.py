@@ -20,9 +20,12 @@ class SVGCanvas:
         rx: int = 0,
     ):
         self.elements.append(
-            f'<rect x="{x}" y="{y}" width="{width}" height="{height}" '
-            f'fill="{fill}" stroke="{stroke}" '
-            f'stroke-width="{stroke_width}" rx="{rx}"/>'
+            f'<rect x="{x}" y="{y}" '
+            f'width="{width}" height="{height}" '
+            f'fill="{fill}" '
+            f'stroke="{stroke}" '
+            f'stroke-width="{stroke_width}" '
+            f'rx="{rx}"/>'
         )
 
     def text(
@@ -58,10 +61,179 @@ class SVGCanvas:
             f'stroke-width="{width}"/>'
         )
 
+    def image(
+        self,
+        x: int,
+        y: int,
+        width: int,
+        height: int,
+        href: str,
+        circular: bool = False,
+    ):
+        if circular:
+            clip_id = f"clip_{len(self.elements)}"
+
+            self.elements.append(
+                f"""
+<defs>
+    <clipPath id="{clip_id}">
+        <circle
+            cx="{x + width / 2}"
+            cy="{y + height / 2}"
+            r="{min(width, height) / 2}"
+        />
+    </clipPath>
+</defs>
+
+<image
+    x="{x}"
+    y="{y}"
+    width="{width}"
+    height="{height}"
+    xlink:href="{href}"
+    preserveAspectRatio="xMidYMid slice"
+    clip-path="url(#{clip_id})"
+/>
+"""
+            )
+        else:
+            self.elements.append(
+                f"""
+<image
+    x="{x}"
+    y="{y}"
+    width="{width}"
+    height="{height}"
+    xlink:href="{href}"
+    preserveAspectRatio="xMidYMid slice"
+/>
+"""
+            )
+
+    def avatar(
+        self,
+        x: int,
+        y: int,
+        size: int,
+        href: str,
+        border_color: str,
+        border_width: int = 3,
+    ):
+        clip_id = f"avatar_clip_{len(self.elements)}"
+
+        self.elements.append(
+            f"""
+<defs>
+    <clipPath id="{clip_id}">
+        <circle
+            cx="{x + size / 2}"
+            cy="{y + size / 2}"
+            r="{size / 2}"
+        />
+    </clipPath>
+</defs>
+
+<circle
+    cx="{x + size / 2}"
+    cy="{y + size / 2}"
+    r="{size / 2}"
+    fill="none"
+    stroke="{border_color}"
+    stroke-width="{border_width}"
+/>
+
+<image
+    x="{x}"
+    y="{y}"
+    width="{size}"
+    height="{size}"
+    xlink:href="{href}"
+    preserveAspectRatio="xMidYMid slice"
+    clip-path="url(#{clip_id})"
+/>
+"""
+        )
+
+    def stat_card(
+        self,
+        x: int,
+        y: int,
+        width: int,
+        height: int,
+        title: str,
+        value: str,
+        background: str,
+        border: str,
+        title_color: str,
+        value_color: str,
+    ):
+        self.rect(
+            x=x,
+            y=y,
+            width=width,
+            height=height,
+            fill=background,
+            stroke=border,
+            stroke_width=1,
+            rx=12,
+        )
+
+        self.text(
+            x + 15,
+            y + 28,
+            title,
+            size=14,
+            fill=title_color,
+        )
+
+        self.text(
+            x + 15,
+            y + 62,
+            value,
+            size=28,
+            fill=value_color,
+            weight="bold",
+        )
+
+    def badge(
+        self,
+        x: int,
+        y: int,
+        text: str,
+        background: str,
+        color: str,
+        border: str,
+    ):
+        padding = 12
+        height = 30
+        width = len(text) * 8 + padding * 2
+
+        self.rect(
+            x=x,
+            y=y,
+            width=width,
+            height=height,
+            fill=background,
+            stroke=border,
+            stroke_width=1,
+            rx=15,
+        )
+
+        self.text(
+            x + padding,
+            y + 20,
+            text,
+            size=14,
+            fill=color,
+            weight="bold",
+        )
+
     def build(self) -> str:
         body = "\n".join(self.elements)
 
-        return f"""<svg xmlns="http://www.w3.org/2000/svg"
+        return f"""<svg
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink"
 width="{self.width}"
 height="{self.height}"
 viewBox="0 0 {self.width} {self.height}">
