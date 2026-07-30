@@ -1,29 +1,19 @@
 <div align="center">
 
-# Valentín Aguayo
-
-### Computer Science Student • Backend Developer
-
-Building reliable software with Python, Java and C#.
-
-<br>
-
+<!-- Banner dinámico SVG como encabezado principal -->
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="dark_mode.svg">
-    <img src="light_mode.svg" alt="GitHub Profile Banner">
+    <img src="light_mode.svg" alt="GitHub Profile Banner" width="100%">
 </picture>
 
 <br><br>
 
+<!-- Badges de calidad del repositorio -->
 <a href="https://github.com/ValentinAguayo1/ValentinAguayo1/actions/workflows/update.yml">
   <img src="https://github.com/ValentinAguayo1/ValentinAguayo1/actions/workflows/update.yml/badge.svg" alt="Build Status">
 </a>
 <img src="https://img.shields.io/badge/tested%20with-pytest-0A9EDC?style=flat&logo=pytest&logoColor=white" alt="Pytest">
 <img src="https://img.shields.io/badge/code%20style-ruff-261230?style=flat&logo=ruff&logoColor=white" alt="Ruff">
-
-<br><br>
-
-<img src="https://skillicons.dev/icons?i=python,java,cs,git,github,vscode,mysql" alt="Tech Stack" />
 
 </div>
 
@@ -55,7 +45,7 @@ I enjoy solving problems through software and continuously improving my programm
 
 ### Currently Learning
 
-- Backend Development & Rest APIs
+- Backend Development & REST APIs
 - Software Architecture & Clean Code
 - Design Patterns
 - Artificial Intelligence
@@ -87,6 +77,9 @@ As I complete new academic and personal projects, this section will showcase the
 <p align="center">
   <a href="https://github.com/ValentinAguayo1">
     <img src="https://img.shields.io/badge/GitHub_Profile-181717?style=for-the-badge&logo=github&logoColor=white"/>
+  </a>
+  <a href="https://www.linkedin.com/in/TU-USUARIO-LINKEDIN">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
   </a>
 </p>
 
