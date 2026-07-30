@@ -1,4 +1,5 @@
 from unittest.mock import MagicMock, patch
+
 from github_api import GitHubAPI
 from models import GitHubStats
 
@@ -39,9 +40,7 @@ def test_get_basic_profile_graphql_error(mock_post):
     """Verifica que si GraphQL responde con la clave 'errors', la API use el fallback sin romper."""
     mock_response = MagicMock()
     mock_response.status_code = 200
-    mock_response.json.return_value = {
-        "errors": [{"message": "User not found"}]
-    }
+    mock_response.json.return_value = {"errors": [{"message": "User not found"}]}
     mock_post.return_value = mock_response
 
     api = GitHubAPI()

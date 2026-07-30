@@ -1,4 +1,5 @@
 import os
+
 import requests
 
 from config import PROFILE
@@ -10,7 +11,7 @@ GRAPHQL_URL = "https://api.github.com/graphql"
 class GitHubAPI:
     def __init__(self):
         self.token = os.getenv("GH_TOKEN")
-        
+
         self.headers = {
             "Authorization": f"Bearer {self.token}" if self.token else "",
             "Content-Type": "application/json",
@@ -18,7 +19,9 @@ class GitHubAPI:
 
     def execute(self, query: str, variables: dict | None = None) -> dict:
         if not self.token:
-            print("[Warning] No existe la variable GH_TOKEN. Se usará respuesta por defecto.")
+            print(
+                "[Warning] No existe la variable GH_TOKEN. Se usará respuesta por defecto."
+            )
             raise RuntimeError("GH_TOKEN no configurado")
 
         try:
@@ -32,7 +35,6 @@ class GitHubAPI:
                 timeout=15,
             )
 
-            
             if response.status_code in (403, 429):
                 print("[Warning] Rate limit alcanzado en GitHub GraphQL API.")
                 raise RuntimeError("Rate limit alcanzado")
@@ -83,8 +85,10 @@ class GitHubAPI:
                 following=user.get("following", {}).get("totalCount", 0),
             )
 
-        except Exception as e:
-            print(f"[Fallback] Generando GitHubStats por defecto debido a un error: {e}")
+        except (requests.exceptions.RequestException, RuntimeError) as e:
+            print(
+                f"[Fallback] Generando GitHubStats por defecto debido a un error: {e}"
+            )
             return GitHubStats(
                 repositories=0,
                 followers=0,
