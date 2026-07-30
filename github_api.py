@@ -1,58 +1,74 @@
-def get_basic_profile(self) -> GitHubStats:
-    query = """
-    query($login: String!) {
-      user(login: $login) {
+import os
+import requests
 
-        avatarUrl(size: 256)
+from config import PROFILE
+from models import GitHubStats
 
-        url
+GRAPHQL_URL = "https://api.github.com/graphql"
 
-        createdAt
 
-        followers {
-          totalCount
+class GitHubAPI:
+    def __init__(self):
+        self.token = os.getenv("GH_TOKEN")
+
+        if not self.token:
+            raise RuntimeError("La variable de entorno GH_TOKEN no existe.")
+
+        self.headers = {
+            "Authorization": f"Bearer {self.token}",
+            "Content-Type": "application/json",
         }
 
-        following {
-          totalCount
-        }
+    def execute(self, query: str, variables: dict | None = None) -> dict:
+        response = requests.post(
+            GRAPHQL_URL,
+            json={
+                "query": query,
+                "variables": variables or {},
+            },
+            headers=self.headers,
+            timeout=15,
+        )
 
-        repositories(
-          ownerAffiliations: OWNER
-          isFork: false
-          first: 100
-        ) {
+        response.raise_for_status()
 
-          totalCount
+        data = response.json()
 
-          nodes {
-            stargazerCount
-            forkCount
+        if "errors" in data:
+            raise RuntimeError(data["errors"])
+
+        return data["data"]
+
+    def get_basic_profile(self) -> GitHubStats:
+        query = """
+        query($login: String!) {
+          user(login: $login) {
+            followers {
+              totalCount
+            }
+
+            following {
+              totalCount
+            }
+
+            repositories(ownerAffiliations: OWNER) {
+              totalCount
+            }
           }
         }
-      }
-    }
-    """
+        """
 
-    data = self.execute(
-        query,
-        {
-            "login": PROFILE.username,
-        },
-    )
+        data = self.execute(
+            query,
+            {
+                "login": PROFILE.username,
+            },
+        )
 
-    user = data["user"]
+        user = data["user"]
 
-    stars = sum(repo["stargazerCount"] for repo in user["repositories"]["nodes"])
-    forks = sum(repo["forkCount"] for repo in user["repositories"]["nodes"])
-
-    return GitHubStats(
-        repositories=user["repositories"]["totalCount"],
-        followers=user["followers"]["totalCount"],
-        following=user["following"]["totalCount"],
-        stars=stars,
-        forks=forks,
-        avatar_url=user["avatarUrl"],
-        profile_url=user["url"],
-        created_at=user["createdAt"],
-    )
+        return GitHubStats(
+            repositories=user["repositories"]["totalCount"],
+            followers=user["followers"]["totalCount"],
+            following=user["following"]["totalCount"],
+        )
