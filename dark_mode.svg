@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg"
+<svg
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink"
 width="900"
 height="380"
 viewBox="0 0 900 380">
@@ -9,12 +11,12 @@ viewBox="0 0 900 380">
 <text x="45" y="60" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="bold" fill="#58A6FF">Valentín Aguayo</text>
 <text x="45" y="90" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="normal" fill="#8B949E">Computer Science Student</text>
 <text x="45" y="115" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#8B949E">🇨🇱 Chile</text>
-<text x="45" y="140" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#C9D1D9">Backend developer in progress. Passionate about Python, Java and software engineering.</text>
+<text x="45" y="140" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#C9D1D9">Computer Science student focused on backend development and software engineering.</text>
 <line x1="45" y1="165" x2="855" y2="165" stroke="#30363D" stroke-width="1"/>
 <text x="45" y="195" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="bold" fill="#58A6FF">GitHub Statistics</text>
 <rect x="45" y="215" width="100" height="90" fill="#0D1117" stroke="#30363D" stroke-width="1" rx="12"/>
 <text x="60" y="243" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#8B949E">Repos</text>
-<text x="60" y="277" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="bold" fill="#58A6FF">1</text>
+<text x="60" y="277" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="bold" fill="#58A6FF">2</text>
 <rect x="155" y="215" width="100" height="90" fill="#0D1117" stroke="#30363D" stroke-width="1" rx="12"/>
 <text x="170" y="243" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#8B949E">Stars</text>
 <text x="170" y="277" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="bold" fill="#58A6FF">0</text>
@@ -23,7 +25,7 @@ viewBox="0 0 900 380">
 <text x="280" y="277" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="bold" fill="#58A6FF">0</text>
 <rect x="375" y="215" width="100" height="90" fill="#0D1117" stroke="#30363D" stroke-width="1" rx="12"/>
 <text x="390" y="243" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#8B949E">Followers</text>
-<text x="390" y="277" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="bold" fill="#58A6FF">6</text>
+<text x="390" y="277" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="bold" fill="#58A6FF">5</text>
 <rect x="485" y="215" width="100" height="90" fill="#0D1117" stroke="#30363D" stroke-width="1" rx="12"/>
 <text x="500" y="243" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="normal" fill="#8B949E">Following</text>
 <text x="500" y="277" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="bold" fill="#58A6FF">5</text>
@@ -41,6 +43,6 @@ viewBox="0 0 900 380">
 <rect x="758" y="260" width="80" height="30" fill="#0D1117" stroke="#30363D" stroke-width="1" rx="15"/>
 <text x="770" y="280" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#C9D1D9">VS Code</text>
 <line x1="45" y1="315" x2="855" y2="315" stroke="#30363D" stroke-width="1"/>
-<text x="45" y="340" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="normal" fill="#8B949E">Auto-generated • Updated: 2026-07-24 02:16 UTC</text>
+<text x="45" y="340" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="normal" fill="#8B949E">Auto-generated • Updated: 2026-07-30 03:24 UTC</text>
 
 </svg>
