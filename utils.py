@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 
 
 def format_number(value: int) -> str:
@@ -12,7 +12,7 @@ def current_timestamp() -> str:
     """
     Devuelve la fecha y hora actual en formato UTC.
     """
-    return datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
+    return datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
 
 def clamp(value: float, minimum: float, maximum: float) -> float:
@@ -23,9 +23,6 @@ def clamp(value: float, minimum: float, maximum: float) -> float:
 
 
 def percentage(value: int, total: int) -> float:
-    """
-    Calcula un porcentaje evitando divisiones por cero.
-    """
-    if total == 0:
+    if total <= 0:
         return 0.0
-    return (value / total) * 100
+    return round((value / total) * 100, 1)
