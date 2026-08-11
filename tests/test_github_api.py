@@ -10,6 +10,11 @@ SAMPLE_GRAPHQL = {
             "avatarUrl": "https://avatars.githubusercontent.com/u/1",
             "url": "https://github.com/ValentinAguayo1",
             "followers": {"totalCount": 5},
+            "contributionsCollection": {
+                "totalCommitContributions": 42,
+                "totalPullRequestContributions": 7,
+                "totalIssueContributions": 3,
+            },
             "repositories": {
                 "totalCount": 4,
                 "nodes": [
@@ -70,6 +75,9 @@ def test_get_basic_profile_exito(mock_post):
     assert stats.followers == 5
     assert stats.stars == 3
     assert stats.forks == 1
+    assert stats.commits == 42
+    assert stats.pull_requests == 7
+    assert stats.issues == 3
     assert stats.avatar_url.endswith("/u/1")
     assert len(stats.languages) >= 1
     assert stats.languages[0].name in {"Python", "TypeScript"}

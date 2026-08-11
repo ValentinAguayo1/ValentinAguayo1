@@ -19,8 +19,16 @@
     <a href="https://github.com/ValentinAguayo1/taskflow">TaskFlow</a>
     ·
     <a href="https://github.com/ValentinAguayo1/gh-summary-cli">gh-summary-cli</a>
+    ·
+    <a href="mailto:valentin.aguayo6@gmail.com">Email</a>
   </p>
 </div>
+
+---
+
+## Currently building
+
+TaskFlow polish (focus workflows) and deeper backend / API design practice.
 
 ---
 
@@ -32,6 +40,34 @@ Projects that show how I think about product, architecture, and delivery.
 |--------:|:-----------|:------|:-------|
 | **[TaskFlow](https://github.com/ValentinAguayo1/taskflow)** | Task manager built around one question: *what should I do now?* Focus mode, drag-and-drop priority, auth, and Firestore security rules. | Angular · Firebase · Firestore | [Live demo](https://taskflow-878df.web.app) |
 | **[gh-summary-cli](https://github.com/ValentinAguayo1/gh-summary-cli)** | Terminal toolkit for GitHub profiles: dashboards, repo health audits, developer comparison, and Gemini executive summaries. | Python · Typer · Rich · httpx · Gemini | `pip install -e .` |
+
+---
+
+## Open to
+
+- Internships / prácticas in backend or software engineering  
+- Collaborations on CLIs, APIs, and full-stack apps  
+- Junior backend roles where clean architecture matters  
+
+**Contact:** [valentin.aguayo6@gmail.com](mailto:valentin.aguayo6@gmail.com)
+
+---
+
+## GitHub activity
+
+Stats and rank from [github-readme-stats](https://github.com/anuraghazra/github-readme-stats) — a popular activity score (commits, PRs, issues, stars), not an official GitHub code-quality grade.
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=ValentinAguayo1&show_icons=true&include_all_commits=true&count_private=true&hide_title=false&hide_border=true&bg_color=0B1220&title_color=2DD4BF&icon_color=2DD4BF&text_color=B8C4D6&ring_color=2DD4BF">
+    <img height="165" alt="GitHub stats" src="https://github-readme-stats.vercel.app/api?username=ValentinAguayo1&show_icons=true&include_all_commits=true&count_private=true&hide_title=false&hide_border=true&bg_color=F4F7FB&title_color=0F766E&icon_color=0F766E&text_color=334155&ring_color=0F766E">
+  </picture>
+  &nbsp;
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=ValentinAguayo1&hide_border=true&background=0B1220&ring=2DD4BF&fire=2DD4BF&currStreakNum=E8EEF7&sideNums=B8C4D6&currStreakLabel=2DD4BF&sideLabels=7A8BA3&dates=7A8BA3">
+    <img height="165" alt="GitHub streak" src="https://streak-stats.demolab.com?user=ValentinAguayo1&hide_border=true&background=F4F7FB&ring=0F766E&fire=0F766E&currStreakNum=0F1B2D&sideNums=334155&currStreakLabel=0F766E&sideLabels=64748B&dates=64748B">
+  </picture>
+</div>
 
 ---
 
@@ -69,6 +105,10 @@ Building systems that stay clear under change.
 
 <br>
 
+<a href="mailto:valentin.aguayo6@gmail.com">
+  <img src="https://img.shields.io/badge/Email-valentin.aguayo6%40gmail.com-0B1220?style=for-the-badge&logo=gmail&logoColor=2DD4BF" alt="Email">
+</a>
+&nbsp;
 <a href="https://github.com/ValentinAguayo1">
   <img src="https://img.shields.io/badge/GitHub-ValentinAguayo1-0B1220?style=for-the-badge&logo=github&logoColor=2DD4BF" alt="GitHub">
 </a>

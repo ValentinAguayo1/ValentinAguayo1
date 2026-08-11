@@ -1,5 +1,6 @@
 import os
 from collections import defaultdict
+from datetime import datetime, timezone
 
 import requests
 
@@ -55,13 +56,21 @@ class GitHubAPI:
             raise
 
     def get_basic_profile(self) -> GitHubStats:
+        now = datetime.now(timezone.utc)
+        year_start = datetime(now.year, 1, 1, tzinfo=timezone.utc)
+
         query = """
-        query($login: String!) {
+        query($login: String!, $from: DateTime!, $to: DateTime!) {
           user(login: $login) {
             avatarUrl
             url
             followers {
               totalCount
+            }
+            contributionsCollection(from: $from, to: $to) {
+              totalCommitContributions
+              totalPullRequestContributions
+              totalIssueContributions
             }
             repositories(ownerAffiliations: OWNER, first: 100, isFork: false) {
               totalCount
@@ -88,12 +97,15 @@ class GitHubAPI:
                 query,
                 {
                     "login": PROFILE.username,
+                    "from": year_start.strftime("%Y-%m-%dT%H:%M:%SZ"),
+                    "to": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
                 },
             )
 
             user = data.get("user") or {}
             repos = user.get("repositories") or {}
             nodes = repos.get("nodes") or []
+            contrib = user.get("contributionsCollection") or {}
 
             stars = sum(n.get("stargazerCount", 0) for n in nodes)
             forks = sum(n.get("forkCount", 0) for n in nodes)
@@ -104,6 +116,9 @@ class GitHubAPI:
                 followers=user.get("followers", {}).get("totalCount", 0),
                 stars=stars,
                 forks=forks,
+                commits=contrib.get("totalCommitContributions", 0),
+                pull_requests=contrib.get("totalPullRequestContributions", 0),
+                issues=contrib.get("totalIssueContributions", 0),
                 avatar_url=user.get("avatarUrl", ""),
                 profile_url=user.get("url", ""),
                 languages=languages,

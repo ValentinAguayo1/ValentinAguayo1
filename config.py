@@ -18,6 +18,9 @@ class ProfileConfig:
     location: str
     tagline: str
     stack_line: str
+    email: str
+    currently_building: str
+    open_to: tuple[str, ...]
 
 
 PROFILE = ProfileConfig(
@@ -27,6 +30,15 @@ PROFILE = ProfileConfig(
     location="Chile",
     tagline="Building APIs, CLIs, and systems that stay maintainable",
     stack_line="Chile · Python · TypeScript · Java · C#",
+    email="valentin.aguayo6@gmail.com",
+    currently_building=(
+        "TaskFlow polish (focus workflows) and deeper backend / API design practice"
+    ),
+    open_to=(
+        "Internships / prácticas in backend or software engineering",
+        "Collaborations on CLIs, APIs, and full-stack apps",
+        "Junior backend roles where clean architecture matters",
+    ),
 )
 
 FEATURED_PROJECTS = [

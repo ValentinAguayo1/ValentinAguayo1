@@ -10,6 +10,9 @@ def test_renderer_smoke(tmp_path: Path):
         followers=5,
         stars=3,
         forks=1,
+        commits=42,
+        pull_requests=7,
+        issues=3,
         languages=[
             Language(name="Python", percentage=60.0, color="#3572A5"),
             Language(name="TypeScript", percentage=40.0, color="#3178C6"),
@@ -24,4 +27,7 @@ def test_renderer_smoke(tmp_path: Path):
     assert "Following" not in content
     assert "languages" in content
     assert "4 repos" in content
+    assert "42 commits" in content
+    assert "7 PRs" in content
+    assert "3 issues" in content
     assert "Building APIs" in content
