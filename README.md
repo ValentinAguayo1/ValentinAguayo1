@@ -55,17 +55,17 @@ Projects that show how I think about product, architecture, and delivery.
 
 ## GitHub activity
 
-Stats and rank from [github-readme-stats](https://github.com/anuraghazra/github-readme-stats) — a popular activity score (commits, PRs, issues, stars), not an official GitHub code-quality grade.
+Stats and rank via a community [github-readme-stats](https://github.com/anuraghazra/github-readme-stats) mirror (the public Vercel host is often paused). This is an activity score — not an official GitHub code-quality grade.
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=ValentinAguayo1&show_icons=true&include_all_commits=true&count_private=true&hide_title=false&hide_border=true&bg_color=0B1220&title_color=2DD4BF&icon_color=2DD4BF&text_color=B8C4D6&ring_color=2DD4BF">
-    <img height="165" alt="GitHub stats" src="https://github-readme-stats.vercel.app/api?username=ValentinAguayo1&show_icons=true&include_all_commits=true&count_private=true&hide_title=false&hide_border=true&bg_color=F4F7FB&title_color=0F766E&icon_color=0F766E&text_color=334155&ring_color=0F766E">
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api?username=ValentinAguayo1&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=true&amp;bg_color=0B1220&amp;title_color=2DD4BF&amp;icon_color=2DD4BF&amp;text_color=B8C4D6&amp;ring_color=2DD4BF">
+    <img height="165" alt="GitHub stats" src="https://github-readme-stats.shion.dev/api?username=ValentinAguayo1&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=true&amp;bg_color=F4F7FB&amp;title_color=0F766E&amp;icon_color=0F766E&amp;text_color=334155&amp;ring_color=0F766E">
   </picture>
   &nbsp;
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=ValentinAguayo1&hide_border=true&background=0B1220&ring=2DD4BF&fire=2DD4BF&currStreakNum=E8EEF7&sideNums=B8C4D6&currStreakLabel=2DD4BF&sideLabels=7A8BA3&dates=7A8BA3">
-    <img height="165" alt="GitHub streak" src="https://streak-stats.demolab.com?user=ValentinAguayo1&hide_border=true&background=F4F7FB&ring=0F766E&fire=0F766E&currStreakNum=0F1B2D&sideNums=334155&currStreakLabel=0F766E&sideLabels=64748B&dates=64748B">
+    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=ValentinAguayo1&amp;hide_border=true&amp;background=0B1220&amp;ring=2DD4BF&amp;fire=2DD4BF&amp;currStreakNum=E8EEF7&amp;sideNums=B8C4D6&amp;currStreakLabel=2DD4BF&amp;sideLabels=7A8BA3&amp;dates=7A8BA3">
+    <img height="165" alt="GitHub streak" src="https://streak-stats.demolab.com?user=ValentinAguayo1&amp;hide_border=true&amp;background=F4F7FB&amp;ring=0F766E&amp;fire=0F766E&amp;currStreakNum=0F1B2D&amp;sideNums=334155&amp;currStreakLabel=0F766E&amp;sideLabels=64748B&amp;dates=64748B">
   </picture>
 </div>
 
