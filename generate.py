@@ -1,5 +1,5 @@
 from github_api import GitHubAPI
-from svg_renderer import SVGRenderer, StreakRenderer
+from svg_renderer import SVGRenderer, StreakRenderer, StatsRenderer
 
 
 def main():
@@ -11,10 +11,12 @@ def main():
     print("Generando tema oscuro...")
     SVGRenderer("dark").render(stats, "dark_mode.svg")
     StreakRenderer("dark").render(stats, "streak_dark.svg")
+    StatsRenderer("dark").render(stats, "stats_dark.svg")
 
     print("Generando tema claro...")
     SVGRenderer("light").render(stats, "light_mode.svg")
     StreakRenderer("light").render(stats, "streak_light.svg")
+    StatsRenderer("light").render(stats, "stats_light.svg")
 
     print("¡Archivos generados correctamente!")
 

@@ -1,7 +1,7 @@
 from pathlib import Path
 
 from models import GitHubStats, Language
-from svg_renderer import SVGRenderer, StreakRenderer
+from svg_renderer import SVGRenderer, StreakRenderer, StatsRenderer
 
 
 def test_renderer_smoke(tmp_path: Path):
@@ -49,3 +49,21 @@ def test_streak_renderer_smoke(tmp_path: Path):
     assert "14" in content
     assert "54" in content
     assert "Streak updates on the next Actions run" not in content
+
+
+def test_stats_renderer_has_no_rank(tmp_path: Path):
+    stats = GitHubStats(
+        repositories=4,
+        followers=5,
+        stars=0,
+        commits=46,
+        pull_requests=0,
+        issues=0,
+    )
+    out = tmp_path / "stats.svg"
+    StatsRenderer("dark").render(stats, str(out))
+    content = out.read_text(encoding="utf-8")
+    assert "GitHub Stats" in content
+    assert "46" in content
+    assert ">C<" not in content
+    assert "Rank" not in content

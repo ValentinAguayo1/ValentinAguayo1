@@ -55,12 +55,12 @@ Projects that show how I think about product, architecture, and delivery.
 
 ## GitHub activity
 
-Stats via a [github-readme-stats](https://github.com/anuraghazra/github-readme-stats) community mirror. Streak is generated in this repo from GitHub GraphQL (same pipeline as the banner). Activity score, not an official GitHub grade.
+Stats and streak are generated in this repo from GitHub GraphQL (same pipeline as the banner).
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api?username=ValentinAguayo1&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=true&amp;bg_color=0B1220&amp;title_color=2DD4BF&amp;icon_color=2DD4BF&amp;text_color=B8C4D6&amp;ring_color=2DD4BF">
-    <img height="165" alt="GitHub stats" src="https://github-readme-stats.shion.dev/api?username=ValentinAguayo1&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=true&amp;bg_color=F4F7FB&amp;title_color=0F766E&amp;icon_color=0F766E&amp;text_color=334155&amp;ring_color=0F766E">
+    <source media="(prefers-color-scheme: dark)" srcset="stats_dark.svg">
+    <img height="165" alt="GitHub stats" src="stats_light.svg">
   </picture>
   &nbsp;
   <picture>

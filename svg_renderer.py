@@ -194,3 +194,49 @@ class StreakRenderer:
         )
 
         c.save(output_file)
+
+
+class StatsRenderer:
+    WIDTH = 495
+    HEIGHT = 195
+
+    def __init__(self, theme: str):
+        if theme not in THEMES:
+            raise ValueError(f"Invalid theme '{theme}'.")
+        self.colors = THEMES[theme]
+        self.canvas = SVGCanvas(
+            width=self.WIDTH,
+            height=self.HEIGHT,
+            background=self.colors["background"],
+        )
+
+    def render(self, stats: GitHubStats, output_file: str):
+        c = self.canvas
+        col = self.colors
+
+        c.rect(
+            x=8,
+            y=8,
+            width=479,
+            height=179,
+            fill=col["surface"],
+            stroke=col["border"],
+            stroke_width=1,
+            rx=4,
+        )
+
+        c.text(28, 42, "GitHub Stats", size=14, fill=col["accent"], weight="700")
+
+        cells = [
+            (28, 78, "Stars", format_number(stats.stars)),
+            (175, 78, "Commits", format_number(stats.commits)),
+            (322, 78, "PRs", format_number(stats.pull_requests)),
+            (28, 132, "Issues", format_number(stats.issues)),
+            (175, 132, "Repos", format_number(stats.repositories)),
+            (322, 132, "Followers", format_number(stats.followers)),
+        ]
+        for x, y, label, value in cells:
+            c.text(x, y, label, size=11, fill=col["secondary"])
+            c.text(x, y + 28, value, size=22, fill=col["title"], weight="700")
+
+        c.save(output_file)
