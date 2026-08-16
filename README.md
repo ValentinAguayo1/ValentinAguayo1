@@ -55,7 +55,7 @@ Projects that show how I think about product, architecture, and delivery.
 
 ## GitHub activity
 
-Stats and rank via a community [github-readme-stats](https://github.com/anuraghazra/github-readme-stats) mirror (the public Vercel host is often paused). This is an activity score — not an official GitHub code-quality grade.
+Stats via a [github-readme-stats](https://github.com/anuraghazra/github-readme-stats) community mirror. Streak is generated in this repo (the public demolab host is often down). Activity score, not an official GitHub grade.
 
 <div align="center">
   <picture>
@@ -64,8 +64,8 @@ Stats and rank via a community [github-readme-stats](https://github.com/anuragha
   </picture>
   &nbsp;
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=ValentinAguayo1&amp;hide_border=true&amp;background=0B1220&amp;ring=2DD4BF&amp;fire=2DD4BF&amp;currStreakNum=E8EEF7&amp;sideNums=B8C4D6&amp;currStreakLabel=2DD4BF&amp;sideLabels=7A8BA3&amp;dates=7A8BA3">
-    <img height="165" alt="GitHub streak" src="https://streak-stats.demolab.com?user=ValentinAguayo1&amp;hide_border=true&amp;background=F4F7FB&amp;ring=0F766E&amp;fire=0F766E&amp;currStreakNum=0F1B2D&amp;sideNums=334155&amp;currStreakLabel=0F766E&amp;sideLabels=64748B&amp;dates=64748B">
+    <source media="(prefers-color-scheme: dark)" srcset="streak_dark.svg">
+    <img height="165" alt="GitHub streak" src="streak_light.svg">
   </picture>
 </div>
 
