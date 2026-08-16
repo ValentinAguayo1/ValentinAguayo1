@@ -55,7 +55,7 @@ Projects that show how I think about product, architecture, and delivery.
 
 ## GitHub activity
 
-Stats via a [github-readme-stats](https://github.com/anuraghazra/github-readme-stats) community mirror. Streak is generated in this repo (the public demolab host is often down). Activity score, not an official GitHub grade.
+Stats via a [github-readme-stats](https://github.com/anuraghazra/github-readme-stats) community mirror. Streak is generated in this repo from GitHub GraphQL (same pipeline as the banner). Activity score, not an official GitHub grade.
 
 <div align="center">
   <picture>

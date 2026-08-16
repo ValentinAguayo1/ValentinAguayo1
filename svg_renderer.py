@@ -107,3 +107,90 @@ class SVGRenderer:
         )
 
         c.save(output_file)
+
+
+class StreakRenderer:
+    WIDTH = 495
+    HEIGHT = 195
+
+    def __init__(self, theme: str):
+        if theme not in THEMES:
+            raise ValueError(f"Invalid theme '{theme}'.")
+        self.colors = THEMES[theme]
+        self.canvas = SVGCanvas(
+            width=self.WIDTH,
+            height=self.HEIGHT,
+            background=self.colors["background"],
+        )
+
+    def render(self, stats: GitHubStats, output_file: str):
+        c = self.canvas
+        col = self.colors
+        created = datetime.fromisoformat(
+            stats.created_at.replace("Z", "+00:00")
+        ).year if stats.created_at else 2022
+
+        c.rect(
+            x=8,
+            y=8,
+            width=479,
+            height=179,
+            fill=col["surface"],
+            stroke=col["border"],
+            stroke_width=1,
+            rx=4,
+        )
+
+        # three columns: total | current | longest
+        c.text(28, 58, "Total Contributions", size=12, fill=col["secondary"])
+        c.text(
+            28,
+            100,
+            format_number(stats.contributions),
+            size=28,
+            fill=col["title"],
+            weight="700",
+        )
+        c.text(
+            28,
+            128,
+            f"{created} - Present",
+            size=11,
+            fill=col["secondary"],
+        )
+
+        c.text(198, 48, "Current Streak", size=12, fill=col["secondary"])
+        c.text(
+            198,
+            100,
+            str(stats.current_streak),
+            size=36,
+            fill=col["accent"],
+            weight="700",
+        )
+        c.text(
+            198,
+            132,
+            stats.current_streak_range or "—",
+            size=11,
+            fill=col["secondary"],
+        )
+
+        c.text(355, 58, "Longest Streak", size=12, fill=col["secondary"])
+        c.text(
+            355,
+            100,
+            str(stats.longest_streak),
+            size=28,
+            fill=col["title"],
+            weight="700",
+        )
+        c.text(
+            355,
+            128,
+            stats.longest_streak_range or "—",
+            size=11,
+            fill=col["secondary"],
+        )
+
+        c.save(output_file)

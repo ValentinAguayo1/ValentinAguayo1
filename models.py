@@ -20,6 +20,10 @@ class GitHubStats:
 
     commits: int = 0
     contributions: int = 0
+    current_streak: int = 0
+    longest_streak: int = 0
+    current_streak_range: str = ""
+    longest_streak_range: str = ""
 
     pull_requests: int = 0
     issues: int = 0

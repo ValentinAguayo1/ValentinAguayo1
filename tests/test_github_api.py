@@ -1,4 +1,5 @@
 from unittest.mock import MagicMock, patch
+from datetime import date
 
 from github_api import GitHubAPI
 from models import GitHubStats, Language
@@ -14,6 +15,20 @@ SAMPLE_GRAPHQL = {
                 "totalCommitContributions": 42,
                 "totalPullRequestContributions": 7,
                 "totalIssueContributions": 3,
+                "contributionCalendar": {
+                    "totalContributions": 54,
+                    "weeks": [
+                        {
+                            "contributionDays": [
+                                {"date": "2026-08-01", "contributionCount": 1},
+                                {"date": "2026-08-02", "contributionCount": 1},
+                                {"date": "2026-08-03", "contributionCount": 0},
+                                {"date": "2026-08-04", "contributionCount": 2},
+                                {"date": "2026-08-05", "contributionCount": 1},
+                            ]
+                        }
+                    ],
+                },
             },
             "repositories": {
                 "totalCount": 4,
@@ -78,6 +93,8 @@ def test_get_basic_profile_exito(mock_post):
     assert stats.commits == 42
     assert stats.pull_requests == 7
     assert stats.issues == 3
+    assert stats.contributions == 54
+    assert stats.longest_streak == 2
     assert stats.avatar_url.endswith("/u/1")
     assert len(stats.languages) >= 1
     assert stats.languages[0].name in {"Python", "TypeScript"}
@@ -118,3 +135,30 @@ def test_aggregate_languages():
     assert "Python" in names
     assert "TypeScript" in names
     assert abs(sum(lang.percentage for lang in languages) - 100.0) < 0.2
+
+
+def test_streaks_from_calendar():
+    calendar = {
+        "totalContributions": 5,
+        "weeks": [
+            {
+                "contributionDays": [
+                    {"date": "2026-08-10", "contributionCount": 1},
+                    {"date": "2026-08-11", "contributionCount": 2},
+                    {"date": "2026-08-12", "contributionCount": 0},
+                    {"date": "2026-08-13", "contributionCount": 1},
+                    {"date": "2026-08-14", "contributionCount": 1},
+                    {"date": "2026-08-15", "contributionCount": 1},
+                ]
+            }
+        ],
+    }
+    total, current, longest, current_range, longest_range = GitHubAPI._streaks_from_calendar(
+        calendar,
+        today=date(2026, 8, 15),
+    )
+    assert total == 5
+    assert current == 3
+    assert longest == 3
+    assert "Aug" in current_range
+    assert "Aug" in longest_range

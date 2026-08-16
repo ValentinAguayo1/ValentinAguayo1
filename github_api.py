@@ -1,6 +1,6 @@
 import os
 from collections import defaultdict
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 
 import requests
 
@@ -71,6 +71,15 @@ class GitHubAPI:
               totalCommitContributions
               totalPullRequestContributions
               totalIssueContributions
+              contributionCalendar {
+                totalContributions
+                weeks {
+                  contributionDays {
+                    date
+                    contributionCount
+                  }
+                }
+              }
             }
             repositories(ownerAffiliations: OWNER, first: 100, isFork: false) {
               totalCount
@@ -106,6 +115,8 @@ class GitHubAPI:
             repos = user.get("repositories") or {}
             nodes = repos.get("nodes") or []
             contrib = user.get("contributionsCollection") or {}
+            calendar = contrib.get("contributionCalendar") or {}
+            streak = self._streaks_from_calendar(calendar)
 
             stars = sum(n.get("stargazerCount", 0) for n in nodes)
             forks = sum(n.get("forkCount", 0) for n in nodes)
@@ -117,6 +128,11 @@ class GitHubAPI:
                 stars=stars,
                 forks=forks,
                 commits=contrib.get("totalCommitContributions", 0),
+                contributions=calendar.get("totalContributions", 0) or streak[0],
+                current_streak=streak[1],
+                longest_streak=streak[2],
+                current_streak_range=streak[3],
+                longest_streak_range=streak[4],
                 pull_requests=contrib.get("totalPullRequestContributions", 0),
                 issues=contrib.get("totalIssueContributions", 0),
                 avatar_url=user.get("avatarUrl", ""),
@@ -129,6 +145,69 @@ class GitHubAPI:
                 f"[Fallback] Generando GitHubStats por defecto debido a un error: {e}"
             )
             return GitHubStats()
+
+    @staticmethod
+    def _format_range(start: date, end: date) -> str:
+        if start == end:
+            return start.strftime("%b %d")
+        if start.year == end.year:
+            return f"{start.strftime('%b %d')} - {end.strftime('%b %d')}"
+        return f"{start.strftime('%b %d, %Y')} - {end.strftime('%b %d, %Y')}"
+
+    @classmethod
+    def _streaks_from_calendar(
+        cls,
+        calendar: dict,
+        today: date | None = None,
+    ) -> tuple[int, int, int, str, str]:
+        today = today or datetime.now(timezone.utc).date()
+        counts: dict[date, int] = {}
+        for week in calendar.get("weeks") or []:
+            for day in week.get("contributionDays") or []:
+                raw = day.get("date")
+                if not raw:
+                    continue
+                counts[date.fromisoformat(raw[:10])] = int(day.get("contributionCount") or 0)
+
+        total = int(calendar.get("totalContributions") or sum(counts.values()))
+        if not counts:
+            return total, 0, 0, "", ""
+
+        contrib_days = sorted(d for d, n in counts.items() if n > 0)
+        longest = 0
+        longest_start = longest_end = None
+        run = 0
+        run_start = None
+        prev = None
+        for d in contrib_days:
+            if prev is not None and d == prev + timedelta(days=1):
+                run += 1
+            else:
+                run = 1
+                run_start = d
+            if run > longest:
+                longest = run
+                longest_start, longest_end = run_start, d
+            prev = d
+
+        cursor = today if counts.get(today, 0) > 0 else today - timedelta(days=1)
+        current = 0
+        current_start = current_end = None
+        while counts.get(cursor, 0) > 0:
+            if current_end is None:
+                current_end = cursor
+            current_start = cursor
+            current += 1
+            cursor -= timedelta(days=1)
+
+        current_range = ""
+        if current and current_end is not None:
+            current_range = cls._format_range(current_start, current_end)
+        longest_range = ""
+        if longest_start and longest_end:
+            longest_range = cls._format_range(longest_start, longest_end)
+
+        return total, current, longest, current_range, longest_range
 
     @staticmethod
     def _aggregate_languages(nodes: list) -> list[Language]:

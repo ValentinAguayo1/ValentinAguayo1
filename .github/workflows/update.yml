@@ -35,20 +35,6 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: python generate.py
 
-      - name: Generate streak (dark)
-        uses: DenverCoder1/github-readme-streak-stats@main
-        with:
-          token: ${{ secrets.GH_TOKEN }}
-          path: streak_dark.svg
-          options: user=ValentinAguayo1&hide_border=true&background=0B1220&ring=2DD4BF&fire=2DD4BF&currStreakNum=E8EEF7&sideNums=B8C4D6&currStreakLabel=2DD4BF&sideLabels=7A8BA3&dates=7A8BA3&disable_animations=true
-
-      - name: Generate streak (light)
-        uses: DenverCoder1/github-readme-streak-stats@main
-        with:
-          token: ${{ secrets.GH_TOKEN }}
-          path: streak_light.svg
-          options: user=ValentinAguayo1&hide_border=true&background=F4F7FB&ring=0F766E&fire=0F766E&currStreakNum=0F1B2D&sideNums=334155&currStreakLabel=0F766E&sideLabels=64748B&dates=64748B&disable_animations=true
-
       - name: Commit generated files
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
