@@ -59,13 +59,13 @@ Stats and streak are generated in this repo from GitHub GraphQL. The letter grad
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="stats_dark.svg">
-    <img height="165" alt="GitHub stats" src="stats_light.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="stats_dark.svg?v=2">
+    <img height="165" alt="GitHub stats" src="stats_light.svg?v=2">
   </picture>
   &nbsp;
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="streak_dark.svg">
-    <img height="165" alt="GitHub streak" src="streak_light.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="streak_dark.svg?v=2">
+    <img height="165" alt="GitHub streak" src="streak_light.svg?v=2">
   </picture>
 </div>
 

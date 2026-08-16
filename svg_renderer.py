@@ -244,33 +244,42 @@ class StatsRenderer:
         y = 68
         for label, value in rows:
             c.text(24, y, label, size=12, fill=col["secondary"])
-            c.text(210, y, value, size=12, fill=col["title"], weight="700")
+            c.text(200, y, value, size=13, fill=col["title"], weight="700")
             y += 22
 
-        cx, cy, radius = 385, 100, 48
+        cx, cy, radius = 378, 108, 52
         circ = 2 * 3.1415926535 * radius
-        visible = circ * (1 - percentile / 100)
+        # Keep a visible arc even on a weak rank so the grade reads like the original card
+        fill_ratio = max(0.12, 1 - percentile / 100)
+        visible = circ * fill_ratio
         c.raw(
-            f'<circle cx="{cx}" cy="{cy}" r="{radius}" fill="none" '
-            f'stroke="{col["bar_track"]}" stroke-width="8"/>'
+            f'<circle cx="{cx}" cy="{cy}" r="{radius}" fill="{col["background"]}" '
+            f'stroke="{col["bar_track"]}" stroke-width="10"/>'
         )
         c.raw(
             f'<circle cx="{cx}" cy="{cy}" r="{radius}" fill="none" '
-            f'stroke="{col["accent"]}" stroke-width="8" '
+            f'stroke="{col["accent"]}" stroke-width="10" '
             f'stroke-linecap="round" transform="rotate(-90 {cx} {cy})" '
             f'stroke-dasharray="{circ:.2f}" stroke-dashoffset="{circ - visible:.2f}">'
             f'<animate attributeName="stroke-dashoffset" from="{circ:.2f}" '
             f'to="{circ - visible:.2f}" dur="1.1s" fill="freeze"/>'
             f"</circle>"
         )
-        # grade: final opacity 1 so GitHub still shows it if SMIL is off
         c.text(
             cx,
-            cy + 12,
+            cy + 8,
             letter,
-            size=32,
+            size=36,
             fill=col["title"],
             weight="700",
+            extra='text-anchor="middle"',
+        )
+        c.text(
+            cx,
+            cy + 72,
+            "Rank",
+            size=12,
+            fill=col["secondary"],
             extra='text-anchor="middle"',
         )
 

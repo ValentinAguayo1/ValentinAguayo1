@@ -12,17 +12,18 @@ aria-label="Valentín Aguayo profile banner">
 <rect x="8" y="8" width="479" height="179" fill="#FFFFFF" stroke="#D5DEEB" stroke-width="1" rx="4"/>
 <text x="24" y="40" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="14" font-weight="700" fill="#0F766E">GitHub Stats</text>
 <text x="24" y="68" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="12" font-weight="normal" fill="#64748B">Total Stars</text>
-<text x="210" y="68" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="12" font-weight="700" fill="#0F1B2D">0</text>
+<text x="200" y="68" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="13" font-weight="700" fill="#0F1B2D">0</text>
 <text x="24" y="90" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="12" font-weight="normal" fill="#64748B">Total Commits</text>
-<text x="210" y="90" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="12" font-weight="700" fill="#0F1B2D">46</text>
+<text x="200" y="90" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="13" font-weight="700" fill="#0F1B2D">46</text>
 <text x="24" y="112" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="12" font-weight="normal" fill="#64748B">Total PRs</text>
-<text x="210" y="112" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="12" font-weight="700" fill="#0F1B2D">0</text>
+<text x="200" y="112" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="13" font-weight="700" fill="#0F1B2D">0</text>
 <text x="24" y="134" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="12" font-weight="normal" fill="#64748B">Total Issues</text>
-<text x="210" y="134" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="12" font-weight="700" fill="#0F1B2D">0</text>
+<text x="200" y="134" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="13" font-weight="700" fill="#0F1B2D">0</text>
 <text x="24" y="156" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="12" font-weight="normal" fill="#64748B">Repos</text>
-<text x="210" y="156" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="12" font-weight="700" fill="#0F1B2D">4</text>
-<circle cx="385" cy="100" r="48" fill="none" stroke="#E2E8F0" stroke-width="8"/>
-<circle cx="385" cy="100" r="48" fill="none" stroke="#0F766E" stroke-width="8" stroke-linecap="round" transform="rotate(-90 385 100)" stroke-dasharray="301.59" stroke-dashoffset="287.12"><animate attributeName="stroke-dashoffset" from="301.59" to="287.12" dur="1.1s" fill="freeze"/></circle>
-<text x="385" y="112" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="32" font-weight="700" fill="#0F1B2D" text-anchor="middle">C</text>
+<text x="200" y="156" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="13" font-weight="700" fill="#0F1B2D">4</text>
+<circle cx="378" cy="108" r="52" fill="#F4F7FB" stroke="#E2E8F0" stroke-width="10"/>
+<circle cx="378" cy="108" r="52" fill="none" stroke="#0F766E" stroke-width="10" stroke-linecap="round" transform="rotate(-90 378 108)" stroke-dasharray="326.73" stroke-dashoffset="287.52"><animate attributeName="stroke-dashoffset" from="326.73" to="287.52" dur="1.1s" fill="freeze"/></circle>
+<text x="378" y="116" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="36" font-weight="700" fill="#0F1B2D" text-anchor="middle">C</text>
+<text x="378" y="180" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="12" font-weight="normal" fill="#64748B" text-anchor="middle">Rank</text>
 
 </svg>

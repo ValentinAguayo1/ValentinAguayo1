@@ -67,4 +67,5 @@ def test_stats_renderer_shows_rank(tmp_path: Path):
     assert "46" in content
     assert "circle" in content
     assert "C" in content
+    assert "Rank" in content
     assert "stroke-dasharray" in content
