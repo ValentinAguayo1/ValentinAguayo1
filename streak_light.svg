@@ -9,15 +9,15 @@ aria-label="Valentín Aguayo profile banner">
 
 <rect width="100%" height="100%" fill="#F4F7FB"/>
 
-<rect x="8" y="8" width="479" height="179" fill="#FFFFFF" stroke="#D5DEEB" stroke-width="1" rx="4"/>
-<text x="28" y="58" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="12" font-weight="normal" fill="#64748B">Total Contributions</text>
-<text x="28" y="100" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="28" font-weight="700" fill="#0F1B2D">54</text>
-<text x="28" y="128" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="11" font-weight="normal" fill="#64748B">2022 - Present</text>
-<text x="198" y="48" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="12" font-weight="normal" fill="#64748B">Current Streak</text>
-<text x="198" y="100" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="36" font-weight="700" fill="#0F766E">14</text>
-<text x="198" y="132" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="11" font-weight="normal" fill="#64748B">Jul 29 - Aug 16</text>
-<text x="355" y="58" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="12" font-weight="normal" fill="#64748B">Longest Streak</text>
-<text x="355" y="100" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="28" font-weight="700" fill="#0F1B2D">14</text>
-<text x="355" y="128" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="11" font-weight="normal" fill="#64748B">Jul 29 - Aug 16</text>
+<rect x="8" y="8" width="479" height="179" fill="#FFFFFF" stroke="#D5DEEB" stroke-width="1" rx="12"/>
+<text x="90" y="52" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="11" font-weight="normal" fill="#64748B" text-anchor="middle">Total Contributions</text>
+<text x="90" y="102" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="26" font-weight="700" fill="#0F1B2D" text-anchor="middle">54</text>
+<text x="90" y="132" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="11" font-weight="normal" fill="#64748B" text-anchor="middle">2022 - Present</text>
+<text x="247" y="52" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="11" font-weight="normal" fill="#64748B" text-anchor="middle">Current Streak</text>
+<text x="247" y="102" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="34" font-weight="700" fill="#0F766E" text-anchor="middle">14</text>
+<text x="247" y="132" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="11" font-weight="normal" fill="#64748B" text-anchor="middle">Jul 29 - Aug 16</text>
+<text x="404" y="52" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="11" font-weight="normal" fill="#64748B" text-anchor="middle">Longest Streak</text>
+<text x="404" y="102" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="26" font-weight="700" fill="#0F1B2D" text-anchor="middle">14</text>
+<text x="404" y="132" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="11" font-weight="normal" fill="#64748B" text-anchor="middle">Jul 29 - Aug 16</text>
 
 </svg>

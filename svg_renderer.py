@@ -138,60 +138,18 @@ class StreakRenderer:
             fill=col["surface"],
             stroke=col["border"],
             stroke_width=1,
-            rx=4,
+            rx=12,
         )
 
-        # three columns: total | current | longest
-        c.text(28, 58, "Total Contributions", size=12, fill=col["secondary"])
-        c.text(
-            28,
-            100,
-            format_number(stats.contributions),
-            size=28,
-            fill=col["title"],
-            weight="700",
-        )
-        c.text(
-            28,
-            128,
-            f"{created} - Present",
-            size=11,
-            fill=col["secondary"],
-        )
-
-        c.text(198, 48, "Current Streak", size=12, fill=col["secondary"])
-        c.text(
-            198,
-            100,
-            str(stats.current_streak),
-            size=36,
-            fill=col["accent"],
-            weight="700",
-        )
-        c.text(
-            198,
-            132,
-            stats.current_streak_range or "—",
-            size=11,
-            fill=col["secondary"],
-        )
-
-        c.text(355, 58, "Longest Streak", size=12, fill=col["secondary"])
-        c.text(
-            355,
-            100,
-            str(stats.longest_streak),
-            size=28,
-            fill=col["title"],
-            weight="700",
-        )
-        c.text(
-            355,
-            128,
-            stats.longest_streak_range or "—",
-            size=11,
-            fill=col["secondary"],
-        )
+        columns = [
+            (90, "Total Contributions", format_number(stats.contributions), col["title"], f"{created} - Present", 26),
+            (247, "Current Streak", str(stats.current_streak), col["accent"], stats.current_streak_range or "—", 34),
+            (404, "Longest Streak", str(stats.longest_streak), col["title"], stats.longest_streak_range or "—", 26),
+        ]
+        for x, title, value, color, subtitle, size in columns:
+            c.text(x, 52, title, size=11, fill=col["secondary"], extra='text-anchor="middle"')
+            c.text(x, 102, value, size=size, fill=color, weight="700", extra='text-anchor="middle"')
+            c.text(x, 132, subtitle, size=11, fill=col["secondary"], extra='text-anchor="middle"')
 
         c.save(output_file)
 
@@ -229,10 +187,10 @@ class StatsRenderer:
             fill=col["surface"],
             stroke=col["border"],
             stroke_width=1,
-            rx=4,
+            rx=12,
         )
 
-        c.text(24, 40, "GitHub Stats", size=14, fill=col["accent"], weight="700")
+        c.text(28, 40, "GitHub Stats", size=14, fill=col["accent"], weight="700")
 
         rows = [
             ("Total Stars", format_number(stats.stars)),
@@ -241,15 +199,15 @@ class StatsRenderer:
             ("Total Issues", format_number(stats.issues)),
             ("Repos", format_number(stats.repositories)),
         ]
-        y = 68
+        y = 70
         for label, value in rows:
-            c.text(24, y, label, size=12, fill=col["secondary"])
-            c.text(200, y, value, size=13, fill=col["title"], weight="700")
+            c.text(28, y, label, size=12, fill=col["secondary"])
+            c.text(188, y, value, size=13, fill=col["title"], weight="700")
             y += 22
 
-        cx, cy, radius = 378, 108, 52
+        # Center of the right pane (stats end ~220, card inner right 487)
+        cx, cy, radius = 355, 98, 50
         circ = 2 * 3.1415926535 * radius
-        # Keep a visible arc even on a weak rank so the grade reads like the original card
         fill_ratio = max(0.12, 1 - percentile / 100)
         visible = circ * fill_ratio
         c.raw(
@@ -267,7 +225,7 @@ class StatsRenderer:
         )
         c.text(
             cx,
-            cy + 8,
+            cy + 12,
             letter,
             size=36,
             fill=col["title"],
@@ -276,9 +234,9 @@ class StatsRenderer:
         )
         c.text(
             cx,
-            cy + 72,
+            168,
             "Rank",
-            size=12,
+            size=11,
             fill=col["secondary"],
             extra='text-anchor="middle"',
         )

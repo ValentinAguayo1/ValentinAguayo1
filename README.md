@@ -55,18 +55,25 @@ Projects that show how I think about product, architecture, and delivery.
 
 ## GitHub activity
 
-Stats and streak are generated in this repo from GitHub GraphQL. The letter grade uses the same activity formula as github-readme-stats (not a code-quality score).
+Stats and streak from GitHub GraphQL. The letter is an activity rank (same idea as github-readme-stats), not a code-quality score.
 
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="stats_dark.svg?v=2">
-    <img height="165" alt="GitHub stats" src="stats_light.svg?v=2">
-  </picture>
-  &nbsp;
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="streak_dark.svg?v=2">
-    <img height="165" alt="GitHub streak" src="streak_light.svg?v=2">
-  </picture>
+  <table>
+    <tr>
+      <td>
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="stats_dark.svg?v=3">
+          <img height="165" alt="GitHub stats" src="stats_light.svg?v=3">
+        </picture>
+      </td>
+      <td>
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="streak_dark.svg?v=3">
+          <img height="165" alt="GitHub streak" src="streak_light.svg?v=3">
+        </picture>
+      </td>
+    </tr>
+  </table>
 </div>
 
 ---
