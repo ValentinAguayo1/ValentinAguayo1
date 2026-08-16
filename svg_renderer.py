@@ -3,7 +3,7 @@ from datetime import datetime, timezone
 from config import PROFILE, THEMES
 from models import GitHubStats
 from svg_canvas import SVGCanvas
-from utils import current_timestamp, format_number
+from utils import calculate_rank, current_timestamp, format_number
 
 
 class SVGRenderer:
@@ -213,6 +213,13 @@ class StatsRenderer:
     def render(self, stats: GitHubStats, output_file: str):
         c = self.canvas
         col = self.colors
+        letter, percentile = calculate_rank(
+            commits=stats.commits,
+            pull_requests=stats.pull_requests,
+            issues=stats.issues,
+            stars=stats.stars,
+            followers=stats.followers,
+        )
 
         c.rect(
             x=8,
@@ -225,18 +232,46 @@ class StatsRenderer:
             rx=4,
         )
 
-        c.text(28, 42, "GitHub Stats", size=14, fill=col["accent"], weight="700")
+        c.text(24, 40, "GitHub Stats", size=14, fill=col["accent"], weight="700")
 
-        cells = [
-            (28, 78, "Stars", format_number(stats.stars)),
-            (175, 78, "Commits", format_number(stats.commits)),
-            (322, 78, "PRs", format_number(stats.pull_requests)),
-            (28, 132, "Issues", format_number(stats.issues)),
-            (175, 132, "Repos", format_number(stats.repositories)),
-            (322, 132, "Followers", format_number(stats.followers)),
+        rows = [
+            ("Total Stars", format_number(stats.stars)),
+            ("Total Commits", format_number(stats.commits)),
+            ("Total PRs", format_number(stats.pull_requests)),
+            ("Total Issues", format_number(stats.issues)),
+            ("Repos", format_number(stats.repositories)),
         ]
-        for x, y, label, value in cells:
-            c.text(x, y, label, size=11, fill=col["secondary"])
-            c.text(x, y + 28, value, size=22, fill=col["title"], weight="700")
+        y = 68
+        for label, value in rows:
+            c.text(24, y, label, size=12, fill=col["secondary"])
+            c.text(210, y, value, size=12, fill=col["title"], weight="700")
+            y += 22
+
+        cx, cy, radius = 385, 100, 48
+        circ = 2 * 3.1415926535 * radius
+        visible = circ * (1 - percentile / 100)
+        c.raw(
+            f'<circle cx="{cx}" cy="{cy}" r="{radius}" fill="none" '
+            f'stroke="{col["bar_track"]}" stroke-width="8"/>'
+        )
+        c.raw(
+            f'<circle cx="{cx}" cy="{cy}" r="{radius}" fill="none" '
+            f'stroke="{col["accent"]}" stroke-width="8" '
+            f'stroke-linecap="round" transform="rotate(-90 {cx} {cy})" '
+            f'stroke-dasharray="{circ:.2f}" stroke-dashoffset="{circ - visible:.2f}">'
+            f'<animate attributeName="stroke-dashoffset" from="{circ:.2f}" '
+            f'to="{circ - visible:.2f}" dur="1.1s" fill="freeze"/>'
+            f"</circle>"
+        )
+        # grade: final opacity 1 so GitHub still shows it if SMIL is off
+        c.text(
+            cx,
+            cy + 12,
+            letter,
+            size=32,
+            fill=col["title"],
+            weight="700",
+            extra='text-anchor="middle"',
+        )
 
         c.save(output_file)

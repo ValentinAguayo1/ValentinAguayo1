@@ -1,4 +1,4 @@
-from utils import clamp, format_number, percentage
+from utils import calculate_rank, clamp, format_number, percentage
 
 
 def test_format_number():
@@ -27,3 +27,27 @@ def test_percentage_normal():
 def test_percentage_division_por_cero():
     """Verifica que no colapse si el total es cero."""
     assert percentage(10, 0) == 0.0
+
+
+def test_calculate_rank_low_activity_is_c():
+    letter, percentile = calculate_rank(
+        commits=46,
+        pull_requests=0,
+        issues=0,
+        stars=0,
+        followers=5,
+    )
+    assert letter in {"C", "C+"}
+    assert percentile > 80
+
+
+def test_calculate_rank_high_activity_is_strong():
+    letter, percentile = calculate_rank(
+        commits=2000,
+        pull_requests=200,
+        issues=80,
+        stars=400,
+        followers=300,
+    )
+    assert letter in {"S", "A+", "A"}
+    assert percentile < 25

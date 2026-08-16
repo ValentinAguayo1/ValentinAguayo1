@@ -51,7 +51,7 @@ def test_streak_renderer_smoke(tmp_path: Path):
     assert "Streak updates on the next Actions run" not in content
 
 
-def test_stats_renderer_has_no_rank(tmp_path: Path):
+def test_stats_renderer_shows_rank(tmp_path: Path):
     stats = GitHubStats(
         repositories=4,
         followers=5,
@@ -65,5 +65,6 @@ def test_stats_renderer_has_no_rank(tmp_path: Path):
     content = out.read_text(encoding="utf-8")
     assert "GitHub Stats" in content
     assert "46" in content
-    assert ">C<" not in content
-    assert "Rank" not in content
+    assert "circle" in content
+    assert "C" in content
+    assert "stroke-dasharray" in content

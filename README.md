@@ -55,7 +55,7 @@ Projects that show how I think about product, architecture, and delivery.
 
 ## GitHub activity
 
-Stats and streak are generated in this repo from GitHub GraphQL (same pipeline as the banner).
+Stats and streak are generated in this repo from GitHub GraphQL. The letter grade uses the same activity formula as github-readme-stats (not a code-quality score).
 
 <div align="center">
   <picture>
