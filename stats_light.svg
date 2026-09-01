@@ -5,11 +5,11 @@
 <text x="28" y="70" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="12" font-weight="normal" fill="#64748B">Stars</text>
 <text x="188" y="70" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="13" font-weight="700" fill="#0F1B2D">0</text>
 <text x="28" y="92" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="12" font-weight="normal" fill="#64748B">Commits (2026)</text>
-<text x="188" y="92" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="13" font-weight="700" fill="#0F1B2D">26</text>
+<text x="188" y="92" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="13" font-weight="700" fill="#0F1B2D">32</text>
 <text x="28" y="114" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="12" font-weight="normal" fill="#64748B">PRs</text>
-<text x="188" y="114" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="13" font-weight="700" fill="#0F1B2D">1</text>
+<text x="188" y="114" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="13" font-weight="700" fill="#0F1B2D">3</text>
 <text x="28" y="136" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="12" font-weight="normal" fill="#64748B">Issues</text>
-<text x="188" y="136" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="13" font-weight="700" fill="#0F1B2D">0</text>
+<text x="188" y="136" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="13" font-weight="700" fill="#0F1B2D">1</text>
 <text x="28" y="158" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="12" font-weight="normal" fill="#64748B">Repos</text>
 <text x="188" y="158" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="13" font-weight="700" fill="#0F1B2D">4</text>
 <circle cx="355" cy="98" r="50" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="10"/>
