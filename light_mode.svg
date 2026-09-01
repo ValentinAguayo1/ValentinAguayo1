@@ -5,8 +5,26 @@
 <text x="40" y="64" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="32" font-weight="700" fill="#0F1B2D" letter-spacing="1.5">VALENTÍN AGUAYO</text>
 <text x="40" y="106" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="14" font-weight="normal" fill="#334155">Building APIs, CLIs, and systems that stay maintainable</text>
 <text x="40" y="130" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="13" font-weight="normal" fill="#64748B">Chile · Python · TypeScript · Java · C#</text>
-<text x="40" y="164" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="14" font-weight="600" fill="#0F766E">0 repos   ·   0 stars   ·   0 followers</text>
-<text x="40" y="188" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="13" font-weight="normal" fill="#334155">2026  ·  0 commits   ·   0 PRs   ·   0 issues</text>
+<text x="40" y="164" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="14" font-weight="600" fill="#0F766E">4 repos   ·   0 stars   ·   6 followers</text>
+<text x="40" y="188" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="13" font-weight="normal" fill="#334155">2026  ·  26 commits   ·   1 PR   ·   0 issues</text>
 <text x="40" y="220" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="12" font-weight="normal" fill="#64748B">languages</text>
-<text x="40" y="248" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="14" font-weight="normal" fill="#64748B">—</text>
+<defs><clipPath id="langbar"><rect x="40" y="232" width="820" height="8" rx="4"/></clipPath></defs>
+<rect x="40" y="232" width="820" height="8" fill="#E2E8F0" rx="4"/>
+<g clip-path="url(#langbar)">
+<rect x="40" y="232" width="369.72" height="8" fill="#3572A5"><animate attributeName="width" from="0" to="369.72" dur="0.7s" begin="0.35s" fill="freeze"/></rect>
+<rect x="409.72" y="232" width="164.51" height="8" fill="#3178c6"><animate attributeName="width" from="0" to="164.51" dur="0.7s" begin="0.43s" fill="freeze"/></rect>
+<rect x="574.23" y="232" width="150.09" height="8" fill="#c6538c"><animate attributeName="width" from="0" to="150.09" dur="0.7s" begin="0.51s" fill="freeze"/></rect>
+<rect x="724.32" y="232" width="100.91" height="8" fill="#e34c26"><animate attributeName="width" from="0" to="100.91" dur="0.7s" begin="0.59s" fill="freeze"/></rect>
+<rect x="825.23" y="232" width="34.77" height="8" fill="#663399"><animate attributeName="width" from="0" to="34.77" dur="0.7s" begin="0.67s" fill="freeze"/></rect>
+</g>
+<rect x="40" y="252" width="8" height="8" fill="#3572A5" rx="2"/>
+<text x="54" y="260" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="11" font-weight="normal" fill="#334155">Python 43.6%</text>
+<rect x="204" y="252" width="8" height="8" fill="#3178c6" rx="2"/>
+<text x="218" y="260" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="11" font-weight="normal" fill="#334155">TypeScript 19.4%</text>
+<rect x="368" y="252" width="8" height="8" fill="#c6538c" rx="2"/>
+<text x="382" y="260" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="11" font-weight="normal" fill="#334155">SCSS 17.7%</text>
+<rect x="532" y="252" width="8" height="8" fill="#e34c26" rx="2"/>
+<text x="546" y="260" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="11" font-weight="normal" fill="#334155">HTML 11.9%</text>
+<rect x="696" y="252" width="8" height="8" fill="#663399" rx="2"/>
+<text x="710" y="260" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="11" font-weight="normal" fill="#334155">CSS 4.1%</text>
 </svg>
