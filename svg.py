@@ -19,6 +19,7 @@ RANK_RING = {
     "B-": 0.41,
     "C+": 0.32,
     "C": 0.23,
+    "—": 0.0,
 }
 
 
@@ -44,6 +45,8 @@ def calculate_rank(
     stars: int,
     repositories: int = 0,
 ) -> str:
+    if commits + pull_requests + issues + stars + repositories <= 0:
+        return "—"
     score = (
         2 * (1 - 2 ** -(commits / 80))
         + 2 * (1 - 2 ** -(pull_requests / 15))

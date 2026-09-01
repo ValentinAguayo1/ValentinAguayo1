@@ -3,6 +3,7 @@ from pathlib import Path
 
 from generate import render_all
 from github_api import GitHubAPI, GitHubStats, Language
+from svg import calculate_rank
 
 
 def test_render_all_generates_expected_files(tmp_path: Path):
@@ -68,3 +69,11 @@ def test_streaks_from_calendar():
     )
     assert (total, current, longest) == (5, 3, 3)
     assert "Aug" in current_range and "Aug" in longest_range
+
+
+def test_rank_is_dash_when_all_stats_are_zero():
+    assert (
+        calculate_rank(commits=0, pull_requests=0, issues=0, stars=0, repositories=0)
+        == "—"
+    )
+    assert calculate_rank(commits=1, pull_requests=0, issues=0, stars=0, repositories=0) != "—"

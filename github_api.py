@@ -40,7 +40,7 @@ def _percentage(value: int, total: int) -> float:
 
 class GitHubAPI:
     def __init__(self):
-        self.token = os.getenv("GH_TOKEN")
+        self.token = os.getenv("GH_TOKEN") or os.getenv("GITHUB_TOKEN")
         self.headers = {
             "Authorization": f"Bearer {self.token}" if self.token else "",
             "Content-Type": "application/json",
@@ -48,8 +48,7 @@ class GitHubAPI:
 
     def get_basic_profile(self) -> GitHubStats:
         if not self.token:
-            print("GH_TOKEN missing; writing empty stats.")
-            return GitHubStats()
+            raise RuntimeError("GH_TOKEN / GITHUB_TOKEN missing")
 
         now = datetime.now(timezone.utc)
         query = """
@@ -99,7 +98,9 @@ class GitHubAPI:
             payload = response.json()
             if payload.get("errors"):
                 raise RuntimeError(payload["errors"])
-            user = (payload.get("data") or {}).get("user") or {}
+            user = (payload.get("data") or {}).get("user")
+            if not user:
+                raise RuntimeError(f"GitHub user not found: {PROFILE.username}")
             repos = user.get("repositories") or {}
             nodes = repos.get("nodes") or []
             contrib = user.get("contributionsCollection") or {}
@@ -120,8 +121,7 @@ class GitHubAPI:
                 languages=self._aggregate_languages(nodes),
             )
         except (requests.exceptions.RequestException, RuntimeError) as err:
-            print(f"GitHub fetch failed ({err}); writing empty stats.")
-            return GitHubStats()
+            raise RuntimeError(f"GitHub fetch failed: {err}") from err
 
     @staticmethod
     def _format_range(start: date, end: date) -> str:

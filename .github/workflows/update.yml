@@ -21,7 +21,7 @@ jobs:
       - run: pytest -q
       - name: Generate profile
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN || github.token }}
         run: python generate.py
       - uses: stefanzweifel/git-auto-commit-action@v7
         with:
