@@ -6,7 +6,7 @@
 <text x="40" y="106" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="14" font-weight="normal" fill="#B8C4D6">Building APIs, CLIs, and systems that stay maintainable</text>
 <text x="40" y="130" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="13" font-weight="normal" fill="#7A8BA3">Chile · Python · TypeScript · Java · C#</text>
 <text x="40" y="164" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="14" font-weight="600" fill="#2DD4BF">4 repos   ·   0 stars   ·   5 followers</text>
-<text x="40" y="188" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="13" font-weight="normal" fill="#B8C4D6">2026  ·  34 commits   ·   3 PRs   ·   1 issue</text>
+<text x="40" y="188" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="13" font-weight="normal" fill="#B8C4D6">2026  ·  35 commits   ·   3 PRs   ·   1 issue</text>
 <text x="40" y="220" font-family="ui-monospace, Cascadia Code, Cascadia Mono, Segoe UI Mono, Consolas, Liberation Mono, Menlo, monospace" font-size="12" font-weight="normal" fill="#7A8BA3">languages</text>
 <defs><clipPath id="langbar"><rect x="40" y="232" width="820" height="8" rx="4"/></clipPath></defs>
 <rect x="40" y="232" width="820" height="8" fill="#1A2438" rx="4"/>
