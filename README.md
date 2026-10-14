@@ -4,12 +4,11 @@
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=600&lines=Computer+Engineering+Student;Angular+%2B+Firebase+web+apps;Python+CLI+tools+with+tests+%26+CI;Open+to+my+first+developer+role" alt="Typing intro" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=600&lines=Software+Engineer;Backend+%26+Automation;Python+tools+with+tests+%26+CI;Open+to+work" alt="Typing intro" />
 
 <br/>
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-visit-0ea5e9?style=for-the-badge&logo=netlify&logoColor=white)](https://portafolio-valentin-aguayo.netlify.app/)
-[![GitHub followers](https://img.shields.io/github/followers/ValentinAguayo1?style=for-the-badge&logo=github&color=6366f1)](https://github.com/ValentinAguayo1)
 ![Status](https://img.shields.io/badge/Status-Open%20to%20work-22c55e?style=for-the-badge)
 
 </div>
@@ -18,19 +17,19 @@
 
 ## About me
 
-I'm a Computer Engineering student who likes shipping things that actually run in production, not just on `localhost`.
+I'm a Software Engineer focused on **backend and automation**. I like shipping things that actually run in production, not just on `localhost`.
 
-- I build **web apps with Angular and Firebase**, and **command-line tools in Python**.
+- I build **Python tools and services** that automate repetitive work, and **web apps on Angular + Firebase** when a project needs a UI.
 - Every project starts with **tests, linting and CI from the very first commit**: Pytest + Ruff on each push, so I catch breakage before delivery.
 - I keep code in **small modules with clear responsibilities**, so it stays easy to change.
 - I use **AI tools (ChatGPT, Gemini, Claude and their APIs)** as part of my daily workflow and inside my projects.
 
 ```python
 class Valentin:
-    role      = "Computer Engineering student"
-    stack     = ["Python", "TypeScript", "Angular", "Firebase", "SQL"]
+    role      = "Software Engineer"
+    focus     = ["Backend", "Automation"]
+    stack     = ["Python", "SQL", "TypeScript", "Angular", "Firebase"]
     practices = ["tests first", "lint on every push", "CI/CD", "deploy for real"]
-    goal      = "my first job as a developer"
 ```
 
 ---
@@ -40,14 +39,14 @@ class Valentin:
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/ValentinAguayo1/taskflow">TaskFlow</a></h3>
-      <p><img src="https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white" /> <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black" /> <img src="https://img.shields.io/badge/Firestore-F57C00?style=flat-square&logo=firebase&logoColor=white" /></p>
-      <p>A task manager focused on <b>what to do right now</b>: Focus mode, drag-and-drop priorities and per-user auth. Deployed on Firebase Hosting with user-scoped security rules.</p>
-    </td>
-    <td width="50%" valign="top">
       <h3><a href="https://github.com/ValentinAguayo1/gh-summary-cli">GH Summary CLI</a></h3>
       <p><img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/Typer-000000?style=flat-square&logo=typer&logoColor=white" /> <img src="https://img.shields.io/badge/Rich-FF6F61?style=flat-square" /> <img src="https://img.shields.io/badge/Gemini-8E75B2?style=flat-square&logo=googlegemini&logoColor=white" /></p>
       <p>A CLI for GitHub profiles: dashboard, health audit, side-by-side comparison and AI-generated summaries. Async HTTP with <code>httpx</code>, Markdown/JSON export, Pytest + Ruff on every push, MIT licensed.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/ValentinAguayo1/taskflow">TaskFlow</a></h3>
+      <p><img src="https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white" /> <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black" /> <img src="https://img.shields.io/badge/Firestore-F57C00?style=flat-square&logo=firebase&logoColor=white" /></p>
+      <p>A task manager focused on <b>what to do right now</b>: Focus mode, drag-and-drop priorities and per-user auth. Deployed on Firebase Hosting with user-scoped security rules.</p>
     </td>
   </tr>
   <tr>
@@ -72,7 +71,7 @@ class Valentin:
 
 **Core**
 
-<img src="https://skillicons.dev/icons?i=python,ts,angular,firebase,mysql&theme=dark" alt="Python, TypeScript, Angular, Firebase, SQL" />
+<img src="https://skillicons.dev/icons?i=python,mysql,ts,angular,firebase&theme=dark" alt="Python, SQL, TypeScript, Angular, Firebase" />
 
 **Quality & DevOps**
 
@@ -90,29 +89,6 @@ class Valentin:
 **Familiar with**
 
 <img src="https://skillicons.dev/icons?i=js,java,cs,dotnet,nodejs,react&theme=dark" alt="JavaScript, Java, C#, .NET, Node.js, React" />
-
-</div>
-
----
-
-## How I work
-
-| | |
-|---|---|
-| **Architecture** | Small modules with separated responsibilities, so code is easy to change. |
-| **Quality** | Pytest and Ruff on every push via GitHub Actions: if something breaks, I see it before delivering. |
-| **Delivery** | Real deployments: TaskFlow runs on Firebase Hosting with auth and per-user rules. |
-
----
-
-## GitHub stats
-
-<div align="center">
-
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=ValentinAguayo1&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ValentinAguayo1&layout=compact&theme=tokyonight&hide_border=true&langs_count=6" alt="Top languages" />
-
-<img src="https://github-readme-streak-stats.herokuapp.com?user=ValentinAguayo1&theme=tokyonight&hide_border=true" alt="Contribution streak" />
 
 </div>
 

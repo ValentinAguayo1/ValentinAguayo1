@@ -6,6 +6,7 @@ assets/photo.png must have a transparent background (it was cut out once with `r
 """
 
 import json
+import os
 import urllib.request
 from pathlib import Path
 from xml.sax.saxutils import escape
@@ -20,7 +21,8 @@ OUT = ROOT / "assets/card.svg"
 PROFILE = [
     ("OS", "Linux"),
     ("Location", "Chile"),
-    ("Role", "Computer Engineering Student"),
+    ("Role", "Software Engineer"),
+    ("Focus", "Backend & Automation"),
     ("Status", "Open to work"),
     ("IDE", "VS Code, Cursor"),
     None,
@@ -31,13 +33,13 @@ PROFILE = [
     ("AI", "ChatGPT, Gemini, Claude"),
 ]
 PROJECTS = [
-    ("TaskFlow", "Angular + Firebase task manager"),
     ("GH Summary CLI", "Python CLI for GitHub profiles"),
+    ("TaskFlow", "Angular + Firebase task manager"),
     ("Shop Admin", "TypeScript dashboard (WIP)"),
 ]
 
 COLS = 52                    # ASCII grid width; rows follow the photo's aspect ratio
-CROP = (190, 10, 670, 790)   # photo box around the head/shoulders (left, top, right, bottom)
+CROP = (190, 10, 670, 640)   # photo box around the head/shoulders (left, top, right, bottom)
 RAMP = " .:-=+*#%@"          # dark -> bright, like a lit face on a dark terminal
 
 FONT = 12
@@ -68,7 +70,9 @@ def ascii_portrait() -> list[str]:
 
 
 def gh(url: str):
-    with urllib.request.urlopen(url, timeout=20) as r:
+    token = os.environ.get("GITHUB_TOKEN")
+    req = urllib.request.Request(url, headers={"Authorization": f"Bearer {token}"} if token else {})
+    with urllib.request.urlopen(req, timeout=20) as r:
         return json.load(r)
 
 
