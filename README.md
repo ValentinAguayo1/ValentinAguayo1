@@ -2,102 +2,41 @@
 
 <img src="assets/card.svg" alt="ValentinAguayo1@github — neofetch-style profile card with ASCII portrait, skills, projects and GitHub stats" width="100%" />
 
-<br/>
+<br/><br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=600&lines=Software+Engineer;Backend+%26+Automation;Python+tools+with+tests+%26+CI;Open+to+work" alt="Typing intro" />
-
-<br/>
-
-[![Portfolio](https://img.shields.io/badge/Portfolio-visit-0ea5e9?style=for-the-badge&logo=netlify&logoColor=white)](https://portafolio-valentin-aguayo.netlify.app/)
-![Status](https://img.shields.io/badge/Status-Open%20to%20work-22c55e?style=for-the-badge)
+[![Portfolio](https://img.shields.io/badge/Portfolio-0ea5e9?style=flat-square&logo=netlify&logoColor=white)](https://portafolio-valentin-aguayo.netlify.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/valent%C3%ADn-aguayo)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:valentin.aguayo@gmail.com)
 
 </div>
 
----
+## About
 
-## About me
+Software Engineer based in Chile, focused on **backend services and automation**. I build Python tools and services, and Angular + Firebase applications when a project needs a user interface.
 
-I'm a Software Engineer focused on **backend and automation**. I like shipping things that actually run in production, not just on `localhost`.
+I treat every repository as production code from the first commit: automated tests, linting and CI on every push, small modules with clear responsibilities, and real deployments.
 
-- I build **Python tools and services** that automate repetitive work, and **web apps on Angular + Firebase** when a project needs a UI.
-- Every project starts with **tests, linting and CI from the very first commit**: Pytest + Ruff on each push, so I catch breakage before delivery.
-- I keep code in **small modules with clear responsibilities**, so it stays easy to change.
-- I use **AI tools (ChatGPT, Gemini, Claude and their APIs)** as part of my daily workflow and inside my projects.
+## Featured projects
 
-```python
-class Valentin:
-    role      = "Software Engineer"
-    focus     = ["Backend", "Automation"]
-    stack     = ["Python", "SQL", "TypeScript", "Angular", "Firebase"]
-    practices = ["tests first", "lint on every push", "CI/CD", "deploy for real"]
-```
+| Project | Description | Stack |
+|---|---|---|
+| [**GH Summary CLI**](https://github.com/ValentinAguayo1/gh-summary-cli) | Command-line tool to audit and compare GitHub profiles, with AI-generated summaries. Async HTTP, Markdown/JSON export, tested in CI. | Python, Typer, Rich, httpx, Gemini API |
+| [**TaskFlow**](https://github.com/ValentinAguayo1/taskflow) | Task manager with focus mode, drag-and-drop priorities and per-user authentication. Deployed on Firebase Hosting with user-scoped security rules. | Angular, TypeScript, Firebase, Firestore |
 
----
+## Tech stack
 
-## Projects in progress
+| | |
+|---|---|
+| **Languages** | Python, TypeScript, SQL |
+| **Frameworks & platforms** | Angular, Firebase (Auth, Firestore, Hosting), Typer |
+| **Quality & CI** | Pytest, Ruff, GitHub Actions |
+| **Tooling** | Git, Linux, LLM APIs (OpenAI, Gemini, Claude) |
+| **Also worked with** | JavaScript, Java, C# / .NET, Node.js, React |
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/ValentinAguayo1/gh-summary-cli">GH Summary CLI</a></h3>
-      <p><img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/Typer-000000?style=flat-square&logo=typer&logoColor=white" /> <img src="https://img.shields.io/badge/Rich-FF6F61?style=flat-square" /> <img src="https://img.shields.io/badge/Gemini-8E75B2?style=flat-square&logo=googlegemini&logoColor=white" /></p>
-      <p>A CLI for GitHub profiles: dashboard, health audit, side-by-side comparison and AI-generated summaries. Async HTTP with <code>httpx</code>, Markdown/JSON export, Pytest + Ruff on every push, MIT licensed.</p>
-    </td>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/ValentinAguayo1/taskflow">TaskFlow</a></h3>
-      <p><img src="https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white" /> <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black" /> <img src="https://img.shields.io/badge/Firestore-F57C00?style=flat-square&logo=firebase&logoColor=white" /></p>
-      <p>A task manager focused on <b>what to do right now</b>: Focus mode, drag-and-drop priorities and per-user auth. Deployed on Firebase Hosting with user-scoped security rules.</p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/ValentinAguayo1/shop-admin-dashboard">Shop Admin Dashboard</a></h3>
-      <p><img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" /> <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" /></p>
-      <p>Early-stage admin panel for a small online shop. Work in progress.</p>
-    </td>
-    <td width="50%" valign="top">
-      <h3><a href="https://portafolio-valentin-aguayo.netlify.app/">Portfolio</a></h3>
-      <p><img src="https://img.shields.io/badge/Netlify-00C7B7?style=flat-square&logo=netlify&logoColor=white" /></p>
-      <p>Interactive terminal-style portfolio. Type <code>help</code> to explore.</p>
-    </td>
-  </tr>
-</table>
+## Contact
 
----
+Open to backend and automation roles.
 
-## Skills
-
-<div align="center">
-
-**Core**
-
-<img src="https://skillicons.dev/icons?i=python,mysql,ts,angular,firebase&theme=dark" alt="Python, SQL, TypeScript, Angular, Firebase" />
-
-**Quality & DevOps**
-
-<img src="https://skillicons.dev/icons?i=git,github,githubactions,linux&theme=dark" alt="Git, GitHub, GitHub Actions, Linux" />
-
-![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
-![Ruff](https://img.shields.io/badge/Ruff-D7FF64?style=for-the-badge&logo=ruff&logoColor=black)
-
-**AI**
-
-![ChatGPT](https://img.shields.io/badge/ChatGPT-412991?style=for-the-badge&logo=openai&logoColor=white)
-![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white)
-![Claude](https://img.shields.io/badge/Claude-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
-
-**Familiar with**
-
-<img src="https://skillicons.dev/icons?i=js,java,cs,dotnet,nodejs,react&theme=dark" alt="JavaScript, Java, C#, .NET, Node.js, React" />
-
-</div>
-
----
-
-<div align="center">
-
-**Let's build something.** Say hi through my [portfolio](https://portafolio-valentin-aguayo.netlify.app/).
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:4c1d95,100:0ea5e9&height=120&section=footer" width="100%" alt="" />
-
-</div>
+- Email: [valentin.aguayo@gmail.com](mailto:valentin.aguayo@gmail.com)
+- LinkedIn: [linkedin.com/in/valentín-aguayo](https://www.linkedin.com/in/valent%C3%ADn-aguayo)
+- Portfolio: [portafolio-valentin-aguayo.netlify.app](https://portafolio-valentin-aguayo.netlify.app/)
